@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event List(admin)</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/admin_profile_list.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="background-color: black;">
+        <div class="container-fluid flex-row" >
+            <h3 class="navbar-brand">Never Miss With-Sp</h3>
+            <div class="collapse navbar-collapse"  id="navbarNavDropdown">
+               <ul class="navbar-nav" style="margin-left: auto;" >
+                <li class="nav-item active"  >
+                  <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+            </div>
+      </nav>
+     <div  class="wrapper">
+          <!-- sidebar -->
+        <div id="sidebar" >
+            <div id="toggler">
+                <a class="navicons tohide" href="/adminpanel"><ion-icon  name="home"></ion-icon></a>
+                <a class="navicons tohide" href="/contact"><ion-icon  name="person"></ion-icon></a>
+                <ion-icon id="toggleicon" name="grid"></ion-icon>
+            </div>
+            <div id="shrinker">
+                <div id="sorting-panel" class="container-fluid">
+                    <div class="inpgrp input-group">
+                        <span class="input-group-text">Find After Date</span>
+                        <input type="date" aria-label="Input Date" class="form-control ">
+                        <button class="btn btn-secondary" type="button" id="button-addon2">Search</button> 
+                    </div>
+                    <div class="inpgrp input-group">
+                        <span class="input-group-text">Find by tags</span>
+                        <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                            <option selected>Open this select menu</option>
+                            <% for(let op of eventTags) { %> 
+                                <option value=""><%=op%> </option>
+                                <% } %> 
+                        </select>
+                        <button class="btn btn-secondary" type="button" id="button-addon2">Search</button> 
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="User-initials">
+                          <h2 class="initials">S</h2> 
+                    </div>
+                    <p class="username">Sushovan Paul(admin)</p> 
+                    <div id="user-btns" class="p-0 container-fluid">
+                        <a href="/admin/UserProfiles" style="text-decoration: none;"><h5 class="userbtn container-fluid" >User Profiles</h5></a>    
+                    </div> 
+                    <div id="user-btns" class="p-0 container-fluid">
+                      <a href="/adminpanel" style="text-decoration: none;"><h5 class="userbtn container-fluid" >All Events</h5></a>    
+                  </div>    
+                  <div id="user-btns" class="p-0 container-fluid">
+                    <a href="/admin/unApprovedList" style="text-decoration: none;"><h5 class="userbtn container-fluid" >Un-Reviewed</h5></a>    
+                </div>  
+                </div>
+                <div id="user-btns" class="p-0 container-fluid">
+                    <form action="/signout" method="POST">
+                        <button type="submit" class="userbtn container-fluid">Sign Out</button>
+                      </form> 
+                </div>
+            </div>
+        </div>
+        <!-- content -->
+        <div id="content" >
+            <div id="holder" class="container">
+                <% for(let user of users){ %> 
+            <div class="cards">
+                <div class="user_initials_content">
+                    <h1 class="initials_User" style="color: white;"><%=user.name.substring(0,1).toUpperCase() %></h1>
+                </div>
+                <div class="overlay">
+                    <h3 class="title"><%=user.name %>  </h3>
+                    <h5 class="end-date">Contris : <%=user.contris%> </h5>
+                </div>
+            </div>
+            <% } %> 
+        </div>  
+      </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="/js/adminpanel.js"></script>
+</body>
+</html>

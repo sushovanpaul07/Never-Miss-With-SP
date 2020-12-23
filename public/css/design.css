@@ -1,0 +1,253 @@
+body{
+   
+    margin: 0;
+    background-color: #282828;
+}
+.side-panel
+{
+    font-family: 'Fredoka One', cursive;
+    position: fixed;
+    z-index: 9;
+    width: 40vh;
+    height: 100vh;
+    margin-left: 0;
+    top: 0;
+    background-color:#676767;
+    box-shadow: 10px 11vh 20px 2px#000000;
+    transition: ease-in-out 0.2s;
+
+}
+.explorer
+{
+    margin-left: 40vh;
+    margin-top: 10vh;
+    height: 100%;
+}
+.logo
+{
+    margin: 3vh;
+    margin-left: 4vh;
+    font-size: 4vh;
+    
+}
+.nav-bar
+{
+    position: fixed;
+    z-index: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-left: 40vh;
+    height: 10vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #676767;
+    box-shadow: 0px 1vh 15px 2px #000000;
+    transition: ease-in-out 0.2s;
+
+}
+
+.nav-links
+{
+    margin-right: 5vh;
+    margin-top: 3vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.5vh;
+    transition: ease-in-out 0.2s;
+}
+
+.btn-panel
+{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 40vh;
+    bottom: 0;
+    background-color:white;
+    height: 7vh;
+}
+.btns
+{
+    height: inherit;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    transition: ease-in-out 0.2s;
+    border-top: solid 3px white;
+    border-right: 2px solid white;
+}
+.holder
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 15vh;
+    margin-left: 5vh;
+}
+.cards
+{
+   
+    height: 45vh;
+    width: 40vh;
+    border-radius: 15px;
+    margin: 25px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 20px  rgb(20, 20, 20);
+    overflow: hidden; 
+    transition: ease-in-out 0.2s;
+}
+.cards:hover
+{
+    overflow: hidden; 
+    box-shadow: 0px 0px 30px  #000000;
+    transition: ease-in-out 0.2s;
+}
+.card-img
+{
+    position: absolute;
+    width: 40vh;
+    height: 45vh;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s;
+    
+}
+.overlay
+{
+    position: absolute;
+    z-index:6;
+    overflow: hidden;
+    width: 40vh;
+    height: 5vh;
+    margin-top: 40vh;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color:white;
+    transition: ease-in-out 0.2s;
+    }
+
+.overlay:hover
+{
+    position: absolute;
+    z-index: 6;
+    margin-top: 30vh;
+    width: 40vh;
+    height: 15vh;
+    transition: ease-in-out 0.2s;
+}
+.title
+{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 2vh;
+    margin: 1vh;
+
+}
+
+.end-date
+{
+    
+    font-family: 'Roboto', sans-serif;
+    color: rgb(95, 95, 95);
+    margin: 1vh;
+    margin-top: 2vh;
+
+}
+
+.tags
+{
+    border-radius: 1vh;
+    font-size: small;
+    background-color: rgb(0, 106, 255);
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 0.5vh;
+    padding: 5px;
+    
+}
+.tags-holder
+{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+}
+
+.test
+{
+    color: #e138ff","#ff98f8","#a550b6;
+}
+
+
+
+.input-holder
+{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    height: 10vh;
+    margin: 0;
+    flex-wrap: nowrap;
+    margin-top: 1vh;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.inps
+{
+    margin-left: 1vh;
+}
+.search-btn
+{
+    height: inherit;
+    width: 10vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: rgba(100,100,100,0.5);
+    transition: ease-in-out 0.2s;
+
+}
+.search-btn:hover
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgba(100,100,100,0.5);
+    transition: ease-in-out 0.2s;
+}
+label
+{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(95, 95, 95);
+    font-size: 2vh;
+}
+.find-btn
+{
+    font-size: 7vh;
+    padding: 15%;
+    color: rgba(37, 37, 37, 0.5);
+}
+input
+{
+    width: 20vh;
+    height: 0.5vh;
+    color: rgba(37, 37, 37, 0.5);
+}
+select
+{
+    width: 20vh;
+    
+    color: rgba(37, 37, 37, 0.5);
+}
+
+.navicons
+{
+    margin: 10px;
+    margin-top: 30px;;
+    color: rgb(77, 77, 77);
+    margin-left: auto;
+    /* text-align: right; */
+    font-size: 5vh;
+    transition: ease-in-out 0.2s;
+}
+
+.navicons:hover
+{
+    color:rgb(52, 235, 204);
+}

@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+
+.color
+{
+    color: white;
+}
+.row
+{
+    min-width: 60vh;
+    padding: 0;
+}
+.contain
+{
+    margin: 0;
+    padding: 0;
+}
